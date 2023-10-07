@@ -7,7 +7,7 @@
     "withGlobalTauri": true
   },
   "package": {
-    "productName": "TauriTemplate",
+    "productName": "PassForge",
     "version": "1.0.0"
   },
   "tauri": {
@@ -29,12 +29,15 @@
       },
       "fs": {
         "all": true
+      },
+      "clipboard": {
+        "all": true
       }
     },
     "bundle": {
       "active": true,
-      "publisher": "Author",
-      "copyright": "Author",
+      "publisher": "Sandun Wiratunga",
+      "copyright": "Sandun Wiratunga",
       "category": "",
       "icon": [
         "icons/32x32.png",
@@ -43,9 +46,9 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "TauriTemplate",
-      "longDescription": "Tauri App Template With Some Config To Get Started",
-      "shortDescription": "Tauri App Template With Some Config To Get Started",
+      "identifier": "PassForge",
+      "longDescription": "An Opensource Password Generator",
+      "shortDescription": "An Opensource Password Generator",
       "externalBin": [],
       "resources": [],
       "targets": "all",
@@ -70,16 +73,18 @@
       "windows": {
         "installMode": "passive"
       },
-      "pubkey": ""
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDRGRjJBNTQzQTM2OEIyNjIKUldSaXNtaWpRNlh5VDlJZ1J3eE43ZFRFR1phS0k0TlFiYTZzaFZKVUgrUHRzQmdoUnVvb1pEZFQK"
     },
     "windows": [
       {
-        "title": "Tauri App",
+        "title": "PassForge",
         "label": "main",
         "url": "index.html",
+        "width": 450,
+        "height": 700,
         "fullscreen": false,
         "focus": true,
-        "resizable": true,
+        "resizable": false,
         "decorations": true,
         "center": true
       }

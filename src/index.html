@@ -8,15 +8,101 @@
 	<script type="module" src="/main.js" defer></script>
 
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
-	<div style="height: 100vh; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px;">
+	<div class="banner flexContainer flexCol">
 
-		<h1 style="font-size: 50px;">Hello World!</h1>
+		<div class="logo flexContainer flexCol">
 
-		<p>Edit <code style="font-family: 'Courier New', Courier, monospace;">index.html</code> to see changes</p>
+			<div class="accent logoText flexContainer flexRow">
+				<i class="fa-solid fa-shield"></i>
+				<h1>PassForge</h1>
+			</div>
+
+			<h2 class="logoSlogan light">Your Secure Password Generator</h2>
+
+		</div>
+
+
+		<div class="container flexContainer flexCol">
+
+			<form class="flexContainer flexCol w100">
+
+				<div class="optionSection flexContainer flexCol w100">
+					<h1 class="regular w100">Strength</h1>
+					<span class="w100 flexContainer">
+						<div class="optionBox" id="strength1">
+							Normal
+						</div>
+						<div class="optionBox" id="strength2">
+							Strong
+						</div>
+					</span>
+				</div>
+
+				<div class="optionSection flexContainer flexCol w100">
+					<h1 class="regular w100">Include Symbols</h1>
+					<span class="w100 flexContainer">
+						<div class="optionBox" id="symbolsYes">
+							Yes
+						</div>
+						<div class="optionBox" id="symbolsNo">
+							No
+						</div>
+					</span>
+				</div>
+
+				<div class="optionSection flexContainer flexCol w100">
+					<h1 class="regular w100">Length</h1>
+					<span class="w100 flexContainer">
+						<div class="optionBox" id="length5">
+							5
+						</div>
+						<div class="optionBox" id="length10">
+							10
+						</div>
+						<div class="optionBox" id="length15">
+							15
+						</div>
+					</span>
+				</div>
+
+			</form>
+
+		</div>
+
+
+		<div class="container flexContainer flexCol">
+
+			<button class="redBtn flexContainer flexRow" id="generateBtn">
+				<span class="btnIcon flexContainer">
+					<i class="fa-solid fa-rotate"></i>
+				</span>
+				<span class="btnText flexContainer">
+					Generate
+				</span>
+			</button>
+
+		</div>
+
+
+		<div class="container flexContainer flexCol">
+
+			<div class="outputField flexContainer flexRow">
+
+				<div id="generatedPW" class="flexContainer h100">
+					kjslkhgkljdhkgfjhkj
+				</div>
+				<button id="copyBtn" class="h100">
+					<i class="fa-solid fa-clone"></i>
+				</button>
+
+			</div>
+
+		</div>
 
 	</div>
 

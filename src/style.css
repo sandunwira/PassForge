@@ -1,14 +1,260 @@
+:root{
+	--white: #ECECEC;
+	--white2: #D9D9D9;
+	--darkgray: #424242;
+	--black: #242424;
+	--accent: #C33333;
+	--accent2: #D54040;
+}
+
+@font-face {
+	font-family: 'Koulen';
+	src: url('./assets/fonts/koulen.ttf') format(truetype);
+}
+@font-face {
+	font-family: 'Fredoka';
+	src: url('./assets/fonts/fredoka.ttf') format(truetype);
+}
+
 * {
 	margin: 0;
 	padding: 0;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Fredoka', sans-serif;
 }
 
 html {
-	scroll-behavior: smooth;
 	user-select: none;
-	color: #ECECEC;
-	background: #242424;
+	color: var(--white);
+	background: var(--black);
 }
 
-code
+
+button{
+	outline: none;
+}
+
+
+.light{
+	font-weight: 300;
+}
+.regular{
+	font-weight: 400;
+}
+.bold{
+	font-weight: 500;
+}
+
+
+.w10{
+	width: 10%;
+}
+.w20{
+	width: 20%;
+}
+.w30{
+	width: 30%;
+}
+.w40{
+	width: 40%;
+}
+.w50{
+	width: 50%;
+}
+.w60{
+	width: 60%;
+}
+.w70{
+	width: 70%;
+}
+.w80{
+	width: 80%;
+}
+.w90{
+	width: 90%;
+}
+.w100{
+	width: 100%;
+}
+
+
+.h10{
+	height: 10%;
+}
+.h20{
+	height: 20%;
+}
+.h30{
+	height: 30%;
+}
+.h40{
+	height: 40%;
+}
+.h50{
+	height: 50%;
+}
+.h60{
+	height: 60%;
+}
+.h70{
+	height: 70%;
+}
+.h80{
+	height: 80%;
+}
+.h90{
+	height: 90%;
+}
+.h100{
+	height: 100%;
+}
+
+
+
+.accent{
+	color: var(--accent);
+}
+
+.flex{
+	display: flex;
+}
+.flexContainer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.flexCol{
+	flex-direction: column;
+}
+.flexRow{
+	flex-direction: row;
+}
+
+
+.banner{
+	height: auto;
+	width: 100%;
+	text-transform: uppercase;
+	gap: 55px;
+	justify-content: flex-start;
+	padding-top: 55px;
+	padding-bottom: 20px;
+}
+
+.container{
+	height: auto;
+	width: 70%;
+}
+
+
+.logoText{
+	gap: 15px;
+}
+.logoText i{
+	font-size: 35px;
+}
+.logoText h1{
+	font-family: 'Koulen', sans-serif;
+	font-size: 50px;
+	letter-spacing: 1px;
+}
+
+.logoSlogan{
+	font-size: 14px;
+	margin-top: -15px;
+}
+
+
+form{
+	gap: 26px;
+}
+
+.optionSection{
+	gap: 12px;
+}
+
+.optionSection h1{
+	text-align: center;
+	font-size: 15px;
+}
+
+.optionSection span{
+	gap: 12px;
+}
+
+.optionSection div{
+	color: var(--white);
+	background: var(--darkgray);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+	font-size: 12px;
+	width: 30%;
+	height: 25px;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.optionSection div:hover{
+	color: var(--black);
+	background: var(--white2);
+	transition: 0.3s;
+}
+
+.optionSection .selected{
+	color: var(--black);
+	background: var(--white2);
+}
+
+
+.redBtn{
+	color: var(--white);
+	background: var(--accent);
+	text-transform: uppercase;
+	font-size: 14px;
+	padding: 10px 14px;
+	border-radius: 6px;
+	border: none;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.redBtn:hover{
+	background: var(--accent2);
+	transition: 0.3s;
+}
+
+.redBtn{
+	gap: 5px;
+}
+
+.redBtn i{
+	font-size: 12px;
+}
+
+
+
+.outputField{
+	height: 35px;
+	width: 100%;
+}
+
+#generatedPW{
+	width: calc(100% - 35px);
+	background: var(--darkgray);
+	border-radius: 6px 0 0 6px;
+	text-transform: none;
+}
+
+#copyBtn{
+	width: 35px;
+	color: var(--white);
+	background: var(--accent);
+	border: none;
+	border-radius: 0 6px 6px 0;
+	cursor: pointer;
+	transition: 0.3s;
+}
+#copyBtn:hover{
+	background: var(--accent2);
+	transition: 0.3s;
+}
