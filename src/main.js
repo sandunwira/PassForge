@@ -16,49 +16,49 @@ const length5 = document.getElementById("length5");
 const length10 = document.getElementById("length10");
 const length15 = document.getElementById("length15");
 
-let strengthValue = 1;
+let strengthValue = 2;
 let symbolsValue = true;
 let lengthValue = 10;
 
 strength1.addEventListener("click", function () {
 	strength1.classList.add("selected");
 	strength2.classList.remove("selected");
-	let strengthValue = 1;
+	strengthValue = 1;
 });
 strength2.addEventListener("click", function () {
 	strength1.classList.remove("selected");
 	strength2.classList.add("selected");
-	let strengthValue = 2;
+	strengthValue = 2;
 });
 
 symbolsNo.addEventListener("click", function () {
 	symbolsNo.classList.add("selected");
 	symbolsYes.classList.remove("selected");
-	let symbolsValue = false;
+	symbolsValue = false;
 });
 symbolsYes.addEventListener("click", function () {
 	symbolsNo.classList.remove("selected");
 	symbolsYes.classList.add("selected");
-	let symbolsValue = true;
+	symbolsValue = true;
 });
 
 length5.addEventListener("click", function () {
 	length5.classList.add("selected");
 	length10.classList.remove("selected");
 	length15.classList.remove("selected");
-	let lengthValue = 5;
+	lengthValue = 5;
 });
 length10.addEventListener("click", function () {
 	length5.classList.remove("selected");
 	length10.classList.add("selected");
 	length15.classList.remove("selected");
-	let lengthValue = 10;
+	lengthValue = 10;
 });
 length15.addEventListener("click", function () {
 	length5.classList.remove("selected");
 	length10.classList.remove("selected");
 	length15.classList.add("selected");
-	let lengthValue = 15;
+	lengthValue = 15;
 });
 
 
@@ -73,13 +73,13 @@ function generatePassword() {
 	if (strengthValue === 1) {
 		characters = numbers;
 	} else if (strengthValue === 2) {
-		characters = characters + numbers;
+		characters += characters + numbers;
 	}
 
 	if (symbolsValue === true) {
 		characters += characters + numbers + symbols;
 	} else if (symbolsValue === false) {
-		characters = characters + numbers;
+		characters += characters + numbers;
 	}
 
 	for (let i = 0; i < lengthValue; i++) {
