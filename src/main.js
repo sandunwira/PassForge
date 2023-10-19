@@ -103,3 +103,19 @@ function copyPassword() {
 		});
 }
 copyBtn.addEventListener("click", copyPassword);
+
+// Show Copied Message
+function showCopyNote() {
+	const copyNote = document.getElementById("copyNote");
+	copyNote.style.display = "block";
+	setTimeout(function () {
+		copyNote.style.display = "none";
+	}, 2000);
+}
+copyBtn.addEventListener("click", showCopyNote);
+
+
+// Disable Right Click
+document.addEventListener('contextmenu', function (event) {
+	event.preventDefault();
+});
