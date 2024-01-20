@@ -39,7 +39,7 @@ fn main() {
       main_window.eval("window.addEventListener('auxclick', function(e) {if (e.button == 1) { e.preventDefault(); }});").unwrap(); //  |  Main
       Ok(())
     })
-    // .plugin(tauri_plugin_window_state::Builder::default().build())
+    .plugin(tauri_plugin_window_state::Builder::default().build())
     .plugin(tauri_plugin_single_instance::init(|app, argv, cwd| {
       println!("{}, {argv:?}, {cwd}", app.package_info().name);
       app.emit_all("single-instance", Payload { args: argv, cwd }).unwrap();
