@@ -71,7 +71,7 @@
       "active": true,
       "dialog": true,
       "endpoints": [
-        "https://passforge.sandunwira.repl.co/updater.json"
+        "https://raw.githubusercontent.com/sandunwira/TauriUpdater/main/passforge.json"
       ],
       "windows": {
         "installMode": "passive"
